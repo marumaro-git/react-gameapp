@@ -1,0 +1,19 @@
+.main {
+  font-size: medium;
+  padding: 10px;
+  text-align: center;
+}
+
+.game_area_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    margin: 10px;
+  }
+}
+
+.param_error {
+  color: red;
+}
