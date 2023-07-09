@@ -1,4 +1,4 @@
-import classes from "../../sass/NumberGame.module.scss";
+import classes from "../../scss/NumberGame.module.scss";
 import { useState } from "react";
 
 // プレイヤー名

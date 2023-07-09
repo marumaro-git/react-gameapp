@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import classes from "../sass/Home.module.scss";
+import classes from "../scss/Home.module.scss";
 
 const GAME_APP_LIST = [
   { name: "特定の数字を言ったら負け", link: "numbergame", sort: 2 },
