@@ -4,6 +4,13 @@ import { useState } from "react";
 // プレイヤー名
 const PLAYER = ["A", "B"];
 
+/**
+ * 現在のゲーム状況を表示
+ * 数字増加、ターン終了ボタン
+ *
+ * @param  props
+ * @returns jsx
+ */
 const GameArea = (props) => {
   if (props.status) {
     return (
@@ -41,9 +48,18 @@ const GameArea = (props) => {
   }
 };
 
+/**
+ * 勝敗がついた際に、負けた方を表示
+ * @param props
+ * @returns jsx
+ */
 const JudgeArea = (props) => {
   if (props.judge) {
-    return <p>{props.turnPlayer}さんの負け</p>;
+    return (
+      <div>
+        <p>{props.turnPlayer}さんの負け</p>
+      </div>
+    );
   }
 };
 
@@ -114,21 +130,19 @@ export const NumberGame = () => {
         setClickCountZero={() => setClickCount(0)}
         judge={judge}
       />
+      <JudgeArea judge={judge} turnPlayer={turnPlayer} />
       <div>
-        <JudgeArea judge={judge} turnPlayer={turnPlayer} />
-        <div>
-          <button
-            onClick={() => {
-              setStatus(false);
-              setDeadNumber(10);
-              setIncreaseCount(0);
-              setClickCount(0);
-              setTurnPlayer(PLAYER[0]);
-            }}
-          >
-            リセット
-          </button>
-        </div>
+        <button
+          onClick={() => {
+            setStatus(false);
+            setDeadNumber(10);
+            setIncreaseCount(0);
+            setClickCount(0);
+            setTurnPlayer(PLAYER[0]);
+          }}
+        >
+          リセット
+        </button>
       </div>
     </div>
   );
