@@ -9,6 +9,8 @@ phases:
   install:
     runtime-versions:
       nodejs: 18
+    commands:
+      - npm install
   # steps:
   build:
     commands:
