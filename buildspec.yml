@@ -9,4 +9,4 @@ phases:
   # steps:
   build:
     commands:
-      - npm run build
+      - react-scripts build
