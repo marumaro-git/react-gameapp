@@ -7,8 +7,8 @@ env:
 
 phases:
   install:
-    commands:
-      - npm install
+    runtime-versions:
+      nodejs: 12
   # steps:
   build:
     commands:
