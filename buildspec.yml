@@ -6,7 +6,10 @@ env:
   shell: /bin/sh
 
 phases:
+  install:
+    commands:
+      - npm install
   # steps:
   build:
     commands:
-      - react-scripts build
+      - npm run build
