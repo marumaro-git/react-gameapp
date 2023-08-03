@@ -1,7 +1,5 @@
 version: 0.2
 
-run-as: aws-codebuild
-
 env:
   shell: /bin/sh
 
