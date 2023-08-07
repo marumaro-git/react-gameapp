@@ -12,4 +12,15 @@ phases:
   # steps:
   build:
     commands:
+      - echo "start build"
       - npm run build
+      - echo "end Build"
+  post_build:
+    commands:
+      - echo "start post_build"
+      - aws s3 cp s3://maromaro-test/react-game-app/build/ s3://myapp-react-gameapp/ --recursive
+      - echo "end post_build"
+artifacts:
+  files:
+    - "build/*"
+  discard-paths: no
