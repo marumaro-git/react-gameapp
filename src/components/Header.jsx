@@ -10,7 +10,7 @@ export const Header = () => {
           <li>
             <Link to="/">ホーム</Link>
           </li>
-          <li>勝敗結果（作成中です）</li>
+          <li>勝敗結果（作成中）</li>
         </ul>
       </nav>
     </header>
